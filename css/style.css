@@ -427,3 +427,52 @@ a:visited {
     justify-content: center;
   }
 }
+
+@media only screen and (max-width: 375px) {
+
+  .container {
+    grid-template-columns: auto auto;
+  }
+
+  .navbar__header {
+    display: none;
+  }
+  .navbar__list {
+    display: none;
+  }
+
+  .aside {
+    width: 0;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .aside.active {
+    width: 192px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    height: 100%;
+  }
+
+  .aside.active .navbar__wrapper {
+    width: 192px;
+  }
+
+  .aside.active .navbar__header {
+    display: flex;
+  }
+
+  .navbar__list {
+    display: block;
+  }
+
+  .navbar__svg-icon {
+    display: none;
+  }
+
+  
+}
